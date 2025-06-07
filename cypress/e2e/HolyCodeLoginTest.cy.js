@@ -6,7 +6,7 @@ describe('Storabble Login Tests', () => {
 
   // Set valid credentials used for positive login tests
   const validEmail = 'viktor.kokeza@gmail.com';
-  const validPass = 'JA2618ja!';
+  const validPass = 'TestPass123';
 
   // Basic HTTP authentication for accessing the test environment
   const auth = {
