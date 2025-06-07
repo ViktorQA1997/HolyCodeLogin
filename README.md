@@ -78,6 +78,16 @@ Ensure the login functionality behaves as expected across different input scenar
 Automated test cases:
 TC01,TC02.TC03, TC04,TC05, TC06, TC07, TC08, TC09 and TC10
 
+## 📁 Folder Structure
+cypress/
+├── e2e/
+│ └── HolyCodeLogin.cy.js
+│ └── cypress.config.cy.js
+├── fixtures/
+├── support/
+Test plan,Cases and Execution report
+README.md
+
 ## 📬 Contact
 
 **Author:** Viktor Kokeza  
