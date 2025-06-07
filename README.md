@@ -5,6 +5,7 @@ This repository contains a Cypress-based automated and manual test suite for ver
 ## 📌 Project Overview
 
 **Tester:** Viktor
+
 **Test Period:** 02.06.2025 – 09.06.2025  
 **App URL:** https://st.storabble.etondigital.com/en/login  
 **Auth Credentials:**  
