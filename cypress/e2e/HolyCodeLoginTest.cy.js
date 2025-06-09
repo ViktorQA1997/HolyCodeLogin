@@ -33,34 +33,34 @@ describe('Storabble Login Tests', () => {
     cy.url().should('include', '/en/listings'); // Verify user is redirected to listings page
   });
 
-  // ❌ TC02: Negative test - entering incorrect password should show 2 error messages
+  // ✅ TC02: Negative test - entering correct email and incorrect password
   it('TC02 - Invalid password shows error message', () => {
     performLogin(validEmail, 'wrongpassword'); // Use correct email but wrong password
     cy.get('form > :nth-child(3)').should('exist'); // Check if email error message exists
     cy.get('form > :nth-child(5)').should('exist'); // Check if password error message exists
   });
 
-  // ❌ TC03: Invalid email format should show error messages
+  // ✅ TC03: Invalid email format should show error messages
   it('TC03 - Invalid email format error message', () => {
     performLogin('viktor1234567@gmail.com', validPass); // Use invalid email
     cy.get('form > :nth-child(3)').should('exist'); // Email error should appear
     cy.get('form > :nth-child(5)').should('exist'); // Password error may also appear
   });
 
-  // ❌ TC04: Empty form fields should trigger required field validation
+  // ✅ TC04: Empty form fields should trigger required field validation
   it('TC04 - Empty fields prevent submission', () => {
     performLogin('', ''); // Leave both fields empty
     cy.get('form > :nth-child(3)').should('exist'); // Email error
     cy.get('form > :nth-child(5)').should('exist'); // Password error
   });
 
-  // ❌ TC05: Leave only password empty and check if proper validation is shown
+  // ✅ TC05: Leave only password empty and check if proper validation is shown
   it('TC05 - Empty password error message', () => {
     performLogin(validEmail, ''); // Only email provided
     cy.get('form > :nth-child(5)').should('exist'); // Check for password error
   });
 
-  // ❌ TC06: Leave only email empty and verify validation
+  // ✅ TC06: Leave only email empty and verify validation
   it('TC06 - Empty email error message', () => {
     performLogin('', validPass); // Only password provided
     cy.get('form > :nth-child(3)').should('exist'); // Check for email error
