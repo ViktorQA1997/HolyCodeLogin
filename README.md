@@ -85,6 +85,5 @@ TC01,TC02.TC03, TC04,TC05, TC06, TC07, TC08, TC09 and TC10
 **Author:** Viktor Kokeza  
 📧 Email: viktor.kokeza@gmail.com
 
-## 🛡 License
-This project is for demonstration and portfolio purposes only.
+
 
