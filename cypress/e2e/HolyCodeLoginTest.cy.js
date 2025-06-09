@@ -33,7 +33,7 @@ describe('Storabble Login Tests', () => {
     cy.url().should('include', '/en/listings'); // Verify user is redirected to listings page
   });
 
-  // ✅ TC02: Negative test - entering correct email and incorrect password
+  // ⚠️ TC02: Negative test - entering correct email and incorrect password
   it('TC02 - Invalid password shows error message', () => {
     performLogin(validEmail, 'wrongpassword'); // Use correct email but wrong password
     cy.get('form > :nth-child(3)').should('exist'); // Check if email error message exists
